@@ -25,5 +25,5 @@ The shell only works with a UNIX based OS, we can use WSL if we are on windows. 
   > ninja
   
   > ./the-dc-shell
-  > 
+   
  4. The Shell shall be up and running!
