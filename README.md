@@ -11,13 +11,19 @@ This shell was created as a part of the C Programming workshop hosted by [A.J.Sa
 The shell only works with a UNIX based OS, we can use WSL if we are on windows. Following are the stes to follow to compile the shell
 1. For Debain based distros (Debain, Ubuntu, Linux Mint, Kali Linux, Pop OS etc)
   > sudo apt-get install cmake
+  
   > sudo apt-get install ninja
 2. For Arch Based distros (Arch, Arco, Manjaro, Garuda etc)
   > pacman -S cmake
+  
   > pacman -S ninja
 3. Clone the project and navigate to project folder and run
   > cmake -GNinja -S . -B build/
+  
   > cd build
+  
   > ninja
+  
   > ./the-dc-shell
+  > 
  4. The Shell shall be up and running!
