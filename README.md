@@ -8,16 +8,16 @@ This shell was created as a part of the C Programming workshop hosted by [A.J.Sa
 
 
 ### Installation Instructions
-The shell only works with a UNIX based OS, we can use WSL if we are on windows. Following are the stes to follow to compile the shell
-1. For Debain based distros (Debain, Ubuntu, Linux Mint, Kali Linux, Pop OS etc)
+The shell only works with a UNIX based OS, we can use WSL if we are on windows. Following are the steps to follow to compile the shell
+1. For Debain based distros (Debain, Ubuntu, Linux Mint, Kali Linux, Pop OS etc) Run
   > sudo apt-get install cmake
   
   > sudo apt-get install ninja
-2. For Arch Based distros (Arch, Arco, Manjaro, Garuda etc)
+2. For Arch Based distros (Arch, Arco, Manjaro, Garuda etc) Run
   > pacman -S cmake
   
   > pacman -S ninja
-3. Clone the project and navigate to project folder and run
+3. Clone the project and navigate to project folder and run 
   > cmake -GNinja -S . -B build/
   
   > cd build
