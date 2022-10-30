@@ -11,7 +11,6 @@
 #define STD_OUT 1
 #define ARGS_MAX 20
 
-int status = 1;
 
 int main(int argc, char **argv)
 {
@@ -28,16 +27,19 @@ int main(int argc, char **argv)
 
   printf("\033c");
   printf("Hello %s ;) \n",user);
-  while(status)
+  for(;;)
   {
-   int i = 0;
-   bzero(cmd_with_args,sizeof(cmd_with_args));
-   print_status_line(user,SIZE);
+    int i = 0;
+    bzero(cmd_with_args,sizeof(cmd_with_args));
+    print_status_line(user,SIZE);
     write(STD_OUT,"> ",2);  
     read_user_input(line, STD_IN, SIZE);
     parse_input_string(line,cmd_with_args,ARGS_MAX);
-   execute_command(cmd_with_args);
+    int cmd_status = parse_built_in_cmd(cmd_with_args);
+    if(cmd_status == 0)
+    {
+        execute_command(cmd_with_args);
+    }
   }
-  printf("\033c");
   return 0;
 }
